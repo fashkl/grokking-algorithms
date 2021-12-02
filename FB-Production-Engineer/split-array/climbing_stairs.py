@@ -9,5 +9,4 @@ def climbing_stairs(n):
     return one
 
 
-
 print(climbing_stairs(5))

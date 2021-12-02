@@ -1,4 +1,3 @@
-
 # def canPartition(nums):
 #     s = sum(nums)
 #     if s % 2 == 1: return False
@@ -27,9 +26,18 @@
 #     return False
 # print(canPartition([1, 5, 11, 5]))
 
-board = []
+def factors(num):
+    factor = []
+    for i in range(1, num + 1):
+        if num % i == 0: factor.append(i)
+    return factor
 
-for x in range(7):
-    board.append(["O"] * 7)
 
+n = 99999
+c = 1
 
+for i in range(2, n + 1):
+    # factor set is Odd --> on
+    if len(factors(i)) % 2 != 0: c += 1
+
+print(c)
